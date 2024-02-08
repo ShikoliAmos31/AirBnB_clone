@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import cmd
-from models.base_model import BaseModel
 from models import storage
 from models.user import User
 from models.state import State
@@ -123,6 +122,9 @@ class HBNBCommand(cmd.Cmd):
             if action == "all()":
                 self.do_all(class_name)
                 return
+            elif action == "count()":
+                self.do_count(class_name)
+                return
         print("*** Unknown syntax:", line)
 
     def do_create(self, line):
@@ -186,6 +188,12 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             print([str(all_objs[obj]) for obj in all_objs if obj.startswith(args[0] + ".")])
+
+    def do_count(self, class_name):
+        """Retrieves the number of instances of a class."""
+        all_objs = storage.all()
+        count = sum(1 for obj in all_objs.values() if type(obj).__name__ == class_name)
+        print(count)
 
     def do_update(self, line):
         """Updates an instance based on the class name and id."""
