@@ -22,7 +22,7 @@ The project is developed and tested on:
 ## 0x03. Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/aysuarex/AirBnB_clone.git
+    git clone https://github.com/Locozyoungg/AirBnB_clone.git
     ```
 2. Navigate to the AirBnb directory:
     ```bash
@@ -47,7 +47,7 @@ To run the tests in non-interactive mode:
 
 python3 -m unittest discover tests
 
-0x05. Usage
+## 0x05. Usage
 Start the console in interactive mode:
 
 ./console.py
@@ -65,7 +65,7 @@ all: Prints all string representations of all instances of a given class.
 count: Prints the number of instances of a given class.
 update: Updates an instance based on class name, ID, and attribute value.
 
-0x06. Authors
+## 0x06. Authors
 Collins Oloo
 Amos Shikoli
 
