@@ -69,3 +69,4 @@ update: Updates an instance based on class name, ID, and attribute value.
 Collins Oloo
 Amos Shikoli
 
+#web_static
